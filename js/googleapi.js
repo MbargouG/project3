@@ -46,7 +46,7 @@ function initMap() {
         }
 
     //slider
-    var slider_img=document.querySelector('.slider-img');
+    document.querySelector('.slider-img');
 // Marker Content
     const iconBase =
         "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
