@@ -1,8 +1,8 @@
 // Initialize and add the map
 function initMap() {
     // The map, centered at IIT
-    const iit = {lat: 41.836895, lng: -87.627276};
-    const map = new google.maps.Map(document.getElementById("map"), {
+    const iit={lat: 41.836895, lng: -87.627276};
+    const map=new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
         center: iit,
     });
@@ -47,7 +47,7 @@ function initMap() {
 
     //slider
     var slider_img = document.querySelector('.slider-img');
-    var images = ['tech.jpg', 'pakistanflag.jpg','game2.jpg','iit_banner.png'];var i = 0;
+    
 
     function prev(){
       if(i <= 0) i = images.length;
@@ -69,7 +69,7 @@ function initMap() {
     // Marker Content
     const iconBase =
         "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
-    const icons = {
+    const icons={
         redCirclePaddle: {
             icon: "https://maps.google.com/mapfiles/kml/paddle/red-circle.png",
         },
@@ -77,7 +77,7 @@ function initMap() {
             icon: iconBase + "library_maps.png",
         },
     };
-    const features = [
+    const features=[
         {
             position: new google.maps.LatLng(41.836895, -87.627276), // IIT
             type: "redCirclePaddle",
@@ -93,16 +93,16 @@ function initMap() {
     ];
 
     // Array of Info Windows
-    let availWindows = [];
-    for (let i = 0; i < features.length; i++) {
-        availWindows[i] = new google.maps.InfoWindow({
+    let availWindows=[];
+    for (let i=0; i < features.length; i++) {
+        availWindows[i]=new google.maps.InfoWindow({
             content: features[i].pinTitle
         });
     }
 
     // Create Markers & Info Windows
-    for (let i = 0; i < features.length; i++) {
-        const marker = new google.maps.Marker({
+    for (let i=0; i < features.length; i++) {
+        const marker=new google.maps.Marker({
             position: features[i].position,
             icon: icons[features[i].type].icon,
             map: map,
